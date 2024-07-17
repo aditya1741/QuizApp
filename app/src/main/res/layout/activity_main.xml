@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/greetingTxtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Aditya"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:shadowColor="#737373"
+        android:fontFamily="sans-serif-condensed"
+        />
+    <TextView
+        android:id="@+id/home_tag_txtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let’s make this day productive"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+
+        android:textColor="#737373"
+        android:shadowColor="#737373"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_below="@id/greetingTxtv"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/profile_photo_home_imgv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_account_circle_24"
+            android:scaleType="centerCrop"
+            android:contentDescription="profile photo"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/points_ranking_crdv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_tag_txtv"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:elevation="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
+                <ImageView
+                    android:id="@+id/trophy_imgv"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_trophy"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/trophy_imgv"
+                    android:layout_marginStart="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ranking "
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textSize="12sp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="348"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#3EB8D4"
+                        />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                >
+                <ImageView
+                    android:id="@+id/points_imgv"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_coin"
+                    android:contentDescription="trophy_img"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/points_imgv"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Points"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textSize="12sp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="1209"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#3EB8D4"
+                        />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/letsplay_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Play"
+        android:layout_below="@id/points_ranking_crdv"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/letsplay_tag"
+        android:layout_marginTop="20dp">
+
+
+</androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
